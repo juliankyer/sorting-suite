@@ -1,19 +1,19 @@
 const bubbleSort = ((array)=> {
   array.forEach(()=>{
-  for (let i = 0; i < array.length; i ++){
-    if (array[i] < array [i-1]){
-      let store = array[i];
+    for (let i = 0; i < array.length; i++){
+    if (array[i-1] > array[i]){
+      let storage = array[i];
       array[i] = array[i-1];
-      array[i-1] = store;
+      array[i-1] = storage;
+      }
     }
-   }
-  })
+  });
   return array;
 });
 
 export default bubbleSort
 
-
+///Nope, that was bubble sort after all.
 /////////WROTE INSERTION SORT FIRST ON ACCIDENT
 // const bubbleSort = ((array)=> {
 //   array.forEach(()=>{
@@ -28,7 +28,7 @@ export default bubbleSort
 //   return array;
 // });
 //^^^^^^^^^did i fuck up and write an insertion sort?
-//YEP. good job.
+//                  YEP. good job.
 // const bubbleSort = ((array)=> {
 //   for (let i = 0; i < array.length; i++){
 //     if (array[i] > array[i+1]) {

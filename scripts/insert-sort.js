@@ -1,30 +1,32 @@
 const insertSort = ((array)=> {
-  array.forEach(()=>{
-    for (let i = 0; i < array.length; i++){
-    if (array[i-1] > array[i]){
-      let storage = array[i];
-      array[i] = array[i-1];
-      array[i-1] = storage;
-      }
+  for (let i = 0; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j - 1] >array[j]) {
+      let storage = array[j];
+      array[j] = array[j-1];
+      array[j-1] = storage;
+      j = j-1;
     }
-  });
+  }
   return array;
 });
 
-////or
-// const bubbleSort = ((array)=> {
-//   array.forEach(()=>{
-//     let swapped = false;
-//     for (let i = 1; i < 5; i++){
-//       if (array[i-1] > array[i]){
-//         let storage = array[i];
-//         array[i] = array[i-1];
-//         array[i-1] = storage;
-//         swapped = true;
-//       }
-//     }
-//   })
-//   return array;
-// })
-
 export default insertSort
+//
+//
+// const insertSort = ((array)=> {
+// //we need a loop
+//   for (let i = 0; i < array.length; i++) {
+//     //then we need another loop, wikipedia says it's a while loop
+//     let j = i;
+//     while (j > 0 && array[j - 1] >array[j]) {
+//       //do our swap function, we can pirate that from bubble
+//       let storage = array[j];
+//       array[j] = array[j-1];
+//       array[j-1] = storage;
+//       //set j back one index
+//       j = j-1;
+//     }
+//   }
+//   return array;
+// });
