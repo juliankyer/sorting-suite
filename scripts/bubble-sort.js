@@ -1,4 +1,7 @@
 const bubbleSort = ((array)=> {
+  if (array.length == 0 || !Array.isArray(array)){
+    throw new Error('error');
+  }
   array.forEach(()=>{
     for (let i = 0; i < array.length; i++){
     if (array[i-1] > array[i]){
@@ -12,6 +15,15 @@ const bubbleSort = ((array)=> {
 });
 
 export default bubbleSort
+
+
+
+
+
+
+
+
+
 
 ///Nope, that was bubble sort after all.
 /////////WROTE INSERTION SORT FIRST ON ACCIDENT

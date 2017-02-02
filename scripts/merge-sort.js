@@ -1,4 +1,7 @@
 const mergeSort = ((array)=> {
+  if (array.length == 0 || !Array.isArray(array)){
+    throw new Error('error');
+  }
   if (array.length < 2) {
     return array;
   }
@@ -27,7 +30,11 @@ export default mergeSort
 
 
 
-// 
+
+
+
+
+//
 // const mergeSort = ((array)=> {
 //   if (array.length < 2) {
 //     return array;

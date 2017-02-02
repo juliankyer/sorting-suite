@@ -1,4 +1,7 @@
 const insertSort = ((array)=> {
+  if (array.length == 0 || !Array.isArray(array)){
+    throw new Error('error');
+  }
   for (let i = 0; i < array.length; i++) {
     let j = i;
     while (j > 0 && array[j - 1] >array[j]) {
@@ -12,6 +15,14 @@ const insertSort = ((array)=> {
 });
 
 export default insertSort
+
+
+
+
+
+
+
+
 //
 //
 // const insertSort = ((array)=> {
